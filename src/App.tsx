@@ -1,4 +1,6 @@
+
 import { Route, Routes } from 'react-router-dom';
+
 import Layout from '@/components/layout/Layout';
 import Dashboard from '@/pages/Dashboard';
 import Leads from '@/pages/Leads';
@@ -17,6 +19,8 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Dashboard />} />
+
+        <Route path="dashboard" element={<Dashboard />} />
         <Route path="leads" element={<Leads />} />
         <Route path="pipeline" element={<Pipeline />} />
         <Route path="customers" element={<Customers />} />
@@ -26,6 +30,7 @@ export default function App() {
         <Route path="calendar" element={<Calendar />} />
         <Route path="analytics" element={<Analytics />} />
         <Route path="team" element={<Team />} />
+
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
